@@ -2,4 +2,10 @@
     height: 6vh;
     background: #fff;
     border-bottom: 1px solid #D9DBDF;
+    display: flex;
+    align-items: center;
+}
+.logo{
+    width: 4vh;
+    height: 4vh;
 }

@@ -1,12 +1,11 @@
 import { useState } from 'react';
 import styles from './header.css';
+import logo from './planet.svg'
 
 const Header = ()=>{
-    const pictures = ['/img/planet.svg'];
-
     return(
         <div className="header">
-            <img className='logo' src={pictures[0]}/>
+            <img className='logo' src={logo} alt='logo'/>
         </div>
     )
 }

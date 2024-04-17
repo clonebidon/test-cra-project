@@ -3,17 +3,22 @@
 const data = require('countrycitystatejson');
 
 const countries = data.getCountries();
+console.log(countries)
 const states = data.getStatesByShort('US');
+console.log(states)
 const cities = data.getCities('US', 'California');
-console.log(countries);
+console.log(cities);
+const S = [];
 const Search = ()=>{
+    countries.forEach(element => {
+        let city = document.createElement('option')
+        city.innerHTML = element.name;
+        console.log(city)
+        S.push(city)
+    });
+    console.log(S)
     return(
-        <>
-    <p>{}</p>
-    <select class="form-control" id="select">
-        <option velue='d'></option>
-    </select>
-</>
+        <></>
     )
 }
 export default Search;

@@ -7,3 +7,7 @@ body{
   background: #ECEEF2;
   color: #222426;
 }
+h1{
+  font-size: 1.3em;
+  margin-left: 1vw;
+}

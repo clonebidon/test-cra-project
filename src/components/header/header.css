@@ -10,3 +10,36 @@
     height: 4vh;
     margin-left: 10vw;
 }
+.header input[type='text']{
+    width: 30vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    height: 2.5vh;
+    padding: .5vh;
+    padding-right: 2.2vh;
+}
+.searchButton{
+    width: 1.8vh; height: 1.8vh;
+    margin-left: -20vh;
+    margin-right: 40vh;
+    background: url(search.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.searchButton:hover{
+    background: url(search2.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.donut{
+    width: 3.4vh;
+    height: 3.4vh;
+    background: url(donut.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.donut:hover{
+    background: url(donut2.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}

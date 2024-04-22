@@ -4,6 +4,7 @@
     border-bottom: 1px solid #D9DBDF;
     display: flex;
     align-items: center;
+    user-select: none;
 }
 .logo{
     width: 4vh;
@@ -12,24 +13,30 @@
 }
 .header input[type='text']{
     width: 30vw;
+    height: 3.5vh;
     margin-left: 10vw;
-    margin-right: 10vw;
     height: 2.5vh;
     padding: .5vh;
     padding-right: 2.2vh;
+    border: 1px solid #858585;
+    border-radius: 2rem;
+    padding-right: 2.8vw;
+    padding-left: 1vw;
+    outline: none; 
+}
+.header input[type='text']:focus{
+    border: 2.2px solid #777777;
 }
 .searchButton{
-    width: 1.8vh; height: 1.8vh;
-    margin-left: -20vh;
-    margin-right: 40vh;
-    background: url(search.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
+    width: calc(2.5vw - 1.4vh); height: calc(3.5vh - 1.7vh);
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+    padding: .7vh;
+    margin-left: -2.6vw;
+    margin-right: 40vh;    
 }
 .searchButton:hover{
-    background: url(search2.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-color: #e4e4e4;
 }
 .donut{
     width: 3.4vh;
@@ -40,6 +47,19 @@
 }
 .donut:hover{
     background: url(donut2.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.dev{
+    background: url(dev1.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 3.6vh;
+    height: 3.6vh;
+    margin-right: 1vw;
+}
+.dev:hover{
+    background: url(dev2.svg);
     background-size: contain;
     background-repeat: no-repeat;
 }

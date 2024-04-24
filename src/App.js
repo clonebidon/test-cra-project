@@ -3,6 +3,7 @@ import { Country, State, City }  from 'country-state-city';
 import './App.css';
 import Search from './search/search';
 import First from './first/first';
+console.log(City.getAllCities());
 // const data = require('countrycitystatejson');
 
 // const countries = data.getCountries();
@@ -73,34 +74,60 @@ import First from './first/first';
 function App() {
   const [selectedCountry, setSelectedCountry] = useState('');
   const [cities, setCities] = useState([]);
+  const countrys = Country.getAllCountries();
+  console.log(countrys[0].isoCode)
+  const country_owl = (e) =>{
+    console.log(e.target)
+    let a = countrys.indexOf(e)
+    console.log(a)
+    setSelectedCountry(e.target.value)
+  }
+  // Состояния для выбранной страны и списка городов
 
-  // Обработчик изменения выбранной страны
-  const handleCountryChange = (e) => {
-    const countryName = e.target.value;
-    setSelectedCountry(countryName);
 
-    // Получаем города для выбранной страны
-    const countryCities = City.getAllCities().filter(city => city.country === countryName);
-    setCities(countryCities);
-  };
+  // // Функция для обработки изменения выбранной страны
+  // const handleCountryChange = (e) => {
+  //   const countryName = e.target.value;
+  //   setSelectedCountry(countryName);
+  // };
+
+  // // Используем useEffect для получения городов при изменении выбранной страны
+  // useEffect(() => {
+  //   // Создаем функцию, которая будет получать города для выбранной страны
+  //   const fetchCities = () => {
+  //     // Заменяем City.getAllCities() на ваш метод для получения городов
+  //     const countryCities = City.getAllCities().filter(city => city.country === selectedCountry);
+  //     setCities(countryCities);
+  //   };
+
+  //   // Проверяем, что выбрана какая-то страна перед вызовом fetchCities
+  //   if (selectedCountry) {
+  //     fetchCities();
+  //   } else {
+  //     // Если страна не выбрана, очищаем список городов
+  //     setCities([]);
+  //   }
+  // }, [selectedCountry]); // Указываем зависимость от selectedCountry
 
   // Получаем список всех стран
   const allCountries = Country.getAllCountries();
+  console.log(allCountries)
 
   // Создаем список опций для выпадающего списка стран
-  const countryOptions = allCountries.map(country => {
-    return <option key={country.code} value={country.name}>{country.name}</option>;
-  });
+  const countryOptions = allCountries.map(country => (
+    <option key={country.code} value={country.name}>{country.name}</option>
+  ));
 
-  // Создаем список опций для выпадающего списка городов
-  const cityOptions = cities.map(city => {
-    return <option key={city.name} value={city.name}>{city.name}</option>;
-  });
+  // // Создаем список опций для выпадающего списка городов
+  // const cityOptions = cities.map(city => (
+  //   <option key={city.name} value={city.name}>{city.name}</option>
+  // ));
+  // console.log(cityOptions);
 
   return (
     <div>
       <div>
-        <select onChange={handleCountryChange}>
+        <select onChange={country_owl}>
           <option value="">Выберите страну</option>
           {countryOptions}
         </select>
@@ -108,7 +135,7 @@ function App() {
       <div>
         <select>
           <option value="">Выберите город</option>
-          {cityOptions}
+          {/* {cityOptions} */}
         </select>
       </div>
     </div>

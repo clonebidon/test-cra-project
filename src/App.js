@@ -77,10 +77,14 @@ function App() {
   const countrys = Country.getAllCountries();
   console.log(countrys[0].isoCode)
   const country_owl = (e) =>{
-    console.log(e.target)
-    let a = countrys.indexOf(e)
+    console.log(e.target.value)
+    let a = countrys.indexOf(e.target.value)
     console.log(a)
+    console.log(e)
     setSelectedCountry(e.target.value)
+    for (isoCode in a){
+      console.log(a[isoCode])
+    }
   }
   // Состояния для выбранной страны и списка городов
 
@@ -127,7 +131,7 @@ function App() {
   return (
     <div>
       <div>
-        <select onChange={country_owl}>
+        <select onChange={country_owl}> 
           <option value="">Выберите страну</option>
           {countryOptions}
         </select>

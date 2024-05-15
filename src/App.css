@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
+*{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 0;
+  padding: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body{
   min-height: 100vh;
+  height: 200vh;
+  position: relative;
+}
+.body_lock{
+  overflow: hidden;
+}
+
+
+
+.choose_city{
+  margin: 100px;
+}
+
+
+
+.notification_container{
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.notification{
+  width: 425px;
+  background: #fff;
+  border-radius: 1em;
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  user-select: none;
+  margin: 2vh;
+}
+.notification h1, .notification h2, .notification h3{
+  color: #0D1117;
+  margin: 1.5vh;
+  margin-left: 2vh;
+}
+.notification h2, .notification h3{
+  display: none;
+}
+.notification input[type="text"]{
+  width: calc(90% - 2vh);
+  height: 3vh;
+  margin-top: 2vh;
+  padding: .5vh;
+  padding-left: 1vh;
+  padding-right: 1vh;
+  margin-left: 5%;
+  border: 1px solid #a3a3a3;
+  border-radius: 1em;
+  outline: none;
+}
+.notification input[type="text"]:focus{
+  border: none;
+  border: 2px solid #494949;
+  padding: calc(.5vh - 1px);
+  padding-left: calc(1vh - 1px);
+  padding-right: calc(1vh - 1px);
 }
 
-.App-link {
-  color: #61dafb;
+.notification .divider{
+  width: calc(100% - 4vh);
+  height: 1px;
+  background: #a3a3a3;
+  margin-left: 2vh;
+  margin-bottom: 1vh;
+}
+.closeCityForm{
+  height: 2vh;
+  padding: 1vh;
+  position: absolute;
+  top: 1.5vh;
+  right: 1.5vh;
+}
+.closeCityForm:hover{
+  background: #dfdfdf;
+  border-radius: 500em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.buttonbox{
+  width: 92%;
+  margin-left: 5%;
+  margin-top: 2vh;
+  gap: 2%;
+  display: flex;
+  margin-bottom: 2vh;
+}
+.buttonbox button{
+  width: 49%;
+  height: 40px;
+  border: none;
+  border-radius: 1em;
+}
+.confirm{
+  background: #43a1ee;
+  color: #fff;
+}
+
+
+@media only screen and (max-width: 500px) {
+  .buttonbox{
+      flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  .buttonbox button{
+      width: 100%;
+      height: 40px;
+      margin-bottom: 1vh;
   }
+  .notification h1{
+      display: none;
+  }
+  .notification h2{
+      display: block;
+  }
+}
+
+@media only screen and (max-width: 325px) {
+  .notification h2{
+      display: none;
+  }
+  .notification h3{
+      display: block;
+  }
+}
+
+.none{
+  display: none;
 }

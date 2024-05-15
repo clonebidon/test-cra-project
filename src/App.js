@@ -66,7 +66,10 @@ function App() {
               <datalist id='countries'>
                 {countryOptions}
               </datalist>
-              <input type="text" name="" id="city" placeholder="City" className="city"/>
+              <input list='cities' type="text" name="" id="city" placeholder="City" className="city"/>
+              <datalist id='cities'>
+              {cityOptions}
+               </datalist>
               <div className="buttonbox">
                   <button className="cancel">Cancel</button>
                   <button className="confirm">Confirm</button>
@@ -76,5 +79,4 @@ function App() {
     </>
   );
 }
-
-export default App;
+export default App

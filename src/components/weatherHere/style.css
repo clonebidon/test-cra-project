@@ -1,0 +1,29 @@
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
+.blockSecWeather{
+    background-color: rgba(2, 36, 36, 0.64);
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainWeather{
+    width: 800px;
+    height: 300px;
+    background-color: rgb(34, 65, 55);
+    padding: 15px 30px ;
+    background-image: url("./cleansky.png");
+    background-position: center;
+}
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.findMeBut{
+    padding: 5px 10px;
+    background-color: rgba(240, 248, 255, 0.337);
+    border: 0;
+    border-radius: 20px;
+}

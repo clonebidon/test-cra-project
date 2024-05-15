@@ -68,7 +68,7 @@ function App() {
               </datalist>
               <input list='cities' type="text" name="" id="city" placeholder="City" className="city"/>
               <datalist id='cities'>
-              {cityOptions}
+                {cityOptions}
                </datalist>
               <div className="buttonbox">
                   <button className="cancel">Cancel</button>

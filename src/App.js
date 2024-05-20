@@ -83,10 +83,10 @@
 import React from "react";
 import Info from "./components/info";
 import Form from "./components/form";
-import WeatherBlock from "./components/weatherHere/WeatherBlock.jsx";
-import ParentComponent from "./components/testing/weatherTest.jsx";
+import WeatherBlock from "./components/weatherHere/WeatherBlock";
+import ParentComponent from "./components/testing/weatherTest";
 
-const API_KEY = "a77161cc9a8c76f10e0fd3fe846df0a2";
+const API_KEY = "8eb56b02f5e05fb8cc330c69fb1f0a86";
 
 class App extends React.Component {
   state = {
